@@ -33,7 +33,7 @@ from telethon.events import CallbackQuery, InlineQuery
 from telethon.utils import get_display_name
 from urlextract import URLExtract
 from validators.url import url
-from userbot import StartTime, iqthon, catversion
+from userbot import StartTime , iqthon, catversion
 from ..Config import Config
 from ..core.logger import logging
 from ..core.managers import edit_delete, edit_or_reply
@@ -49,7 +49,7 @@ from SQL.extras import *
 ALIVE = gvarstatus("OR_ALIVE") or "(فحص|السورس)"
 UPDATE = gvarstatus("OR_UPDATE") or "(اعاده تشغيل|تحديث)"
 ORDERS = gvarstatus("OR_ORDERS") or "(اوامري|أوامري|م)"
-IQTHONPC = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/7aa8ce05fbcabdfd32090.mp4"
+IQTHONPC = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/53676d4ce6cb2e4564395.jpg"
 LOGS = logging.getLogger(os.path.basename(__name__))
 LOGS1 = logging.getLogger(__name__)
 ppath = os.path.join(os.getcwd(), "temp", "githubuser.jpg")
@@ -65,7 +65,7 @@ vlist = [    "ALIVE_PIC",    "ALIVE_EMOJI",    "ALIVE_TELETHONIQ",    "ALIVE_TEX
 DELETE_TIMEOUT = 5
 thumb_image_path = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "thumb_image.jpg")
 oldvars = {    "PM_PIC": "pmpermit_pic",    "PM_TEXT": "pmpermit_txt",    "PM_BLOCK": "pmblock",}
-IQPIC = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/7aa8ce05fbcabdfd32090.mp4"
+IQPIC = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/53676d4ce6cb2e4564395.jpg"
 def convert_from_bytes(size):
     power = 2 ** 10
     n = 0
@@ -84,8 +84,8 @@ async def iq(iqthonevent):
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI = gvarstatus("ALIVE_EMOJI") or "☭︙"
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "𝗐𝖾𝗅𝖼𝗈𝗆𝖾 𝗍𝖾𝗅𝖾𝗍𝗁𝗈𝗇 𝖺𝗅 𝖺𝗋𝖺𝖻 𓃠"
-    IQTHON_IMG = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/7aa8ce05fbcabdfd32090.mp4"
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "𝗐𝖾𝗅𝖼𝗈𝗆𝖾 ALMHEB 𓃠"
+    IQTHON_IMG = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/53676d4ce6cb2e4564395.jpg"
     tg_bot = Config.TG_BOT_USERNAME
     me = await iqthonevent.client.get_me()
     my_last = me.last_name
@@ -114,16 +114,17 @@ async def iq(iqthonevent):
             return await edit_or_reply(iqevent)
     else:
         await edit_or_reply(iqevent,caption)
-fahs = """.𓄌 : me  {my_mention}  𓇡.
+fahs = """
+.𓄌 : me  {my_mention}  𓇡.
 .𓄌 : time  {TM}  𓇡.
 .𓄌 : up time  {uptime}  𓇡.
 .𓄌 : My Bot  {tg_bot}  𓇡.
 .𓄌 : ping  {ping}  𓇡.
 .𓄌 : version 7.5  𓇡.
-.𓄌 : Source TelethonArab : @iqthon  𓇡."""
+.𓄌 : Source ALMHEB : @iqthon  𓇡."""
 @iqthon.on(admin_cmd(pattern="رابط التنصيب(?: |$)(.*)"))    
 async def source(e):
-    await edit_or_reply(e, "https://github.com/telethonAr/TelethonArab",)
+    await edit_or_reply(e, "https://github.com/weall2022/Wael-Telethon",)
 @iqthon.on(admin_cmd(pattern="حساب كيثاب( -l(\d+))? ([\s\S]*)"))    
 async def _(event):
     reply_to = await reply_id(event)
@@ -183,7 +184,7 @@ async def amireallyalive(event):
     uptime = await get_readable_time((time.time() - StartTime))
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI_TELETHON = gvarstatus("ALIVE_EMOJI") or " ٍَ 🖤"
-    IQTHON_ALIVE_TEXT = "❬ تـليثون العـرب - Telethon-Arabe ، 🕸  ❭ :"
+    IQTHON_ALIVE_TEXT = "❬ المهيب - almheb ، 🕸  ❭ :"
     IQTHON_IMG = gvarstatus("ALIVE_PIC")
     if IQTHON_IMG:
         CAT = [x for x in IQTHON_IMG.split()]
@@ -364,8 +365,8 @@ async def variable(var):
         try:
             variable = var.pattern_match.group(2).split()[0]
             if variable in heroku_var:
-                return await ics.edit(                    "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬  - 𝑮𝑶𝑵𝑭𝑰𝑮 𝑽𝑨𝑹𝑺 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"                    f"\n **⌔** `{variable} = {heroku_var[variable]}` .\n"                )
-            return await ics.edit(                "𓆩 𝑺𝑶𝑼𝑹𝑪𝑬 - 𝑮𝑶𝑵𝑭𝑰𝑮 𝑽𝑨𝑹𝑺 𓆪\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"                f"\n **⌔ خطا :**\n-> {variable} غيـر موجود. "            )
+                return await ics.edit(                    "𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"                    f"\n **⌔** `{variable} = {heroku_var[variable]}` .\n"                )
+            return await ics.edit(                "𓍹ⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"                f"\n **⌔ خطا :**\n-> {variable} غيـر موجود. "            )
         except IndexError:
             configs = prettyjson(heroku_var.to_dict(), indent=2)
             with open("configs.json", "w") as fp:
@@ -684,8 +685,7 @@ async def iq(event):
 〖`.م30`〗⏎ اوامر الوسائط والصور
 〖`.م31`〗⏎ اوامر الملصقات
                                                ┉┉┉┉┉┉×┉┉┉┉┉
-قم بنسخ الامر ولصقة لاضهار قائمة الاوامر
-لـروئية المتغيرات ارسل ⏎ 〖`.مساعده`〗""")
+قم بنسخ الامر ولصقة لاضهار قائمة الاوامر""")
 @iqthon.on(admin_cmd(pattern="م9(?: |$)(.*)"))    
 async def iq(event):
     await edit_or_reply(event, "**🚹  ⦑   اوامر الالعاب 1   ⦒  :**\n\n⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮ \n**⑴  ⦙  نسب وهميه :**\n`.نسبه الحب + الرد ع الشخص`\n`. نسبه الانحراف + الرد ع الشخص `\n`.نسبه الكراهيه + الرد ع الشخص`\n`.نسبه المثليه +الرد ع الشخص`\n`. نسبه النجاح + الرد ع الشخص`\n`.نسبه الانوثه + الرد ع الشخص `\n`.نسبه الغباء + الرد ع الشخص`\n⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮ \n**⑵  ⦙  رفع وهمي :**\n`.رفع زباله + الرد ع الشخص `\n`.رفع منشئ + الرد ع الشخص `\n`.رفع مدير + الرد ع الشخص`\n`.رفع مطور + الرد ع الشخص` \n`.رفع مثلي + الرد ع الشخص` \n`.رفع كواد + الرد ع الشخص` \n`.رفع مرتبط + الرد ع الشخص` \n`.رفع مطي + الرد ع الشخص` \n`.رفع كحبه + الرد ع الشخص` \n`.رفع زوجتي + الرد ع الشخص` \n`.رفع صاك + الرد ع الشخص` \n`.رفع صاكه + الرد ع الشخص`\n⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮\n⑶  ⦙ `.كت`\n**✐ : لعبه اسأله كت تويت عشوائيه ❝**\n⑷  ⦙ `.اكس او` \n**✐ :  لعبه اكس او دز الامر و اللعب ويا صديقك ❝**\n⑸  ⦙  `.همسه + الكلام + معرف الشخص` \n**✐ : يرسل همسه سريه الى معرف الشخص فقط هو يكدر يشوفها  ❝**\n")
@@ -713,8 +713,7 @@ async def iq(event):
 **✐  :  يرسل اليك فيديوهات عشوائية اخرى**
 ⑺ ⦙ `.فايروس`
 **✐  :  يرسل فايروس الى المجموعه او الدردشه ويقوم بتعليقها**
-⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮
-⦑   شرح الاوامر : @L3LL3   ⦒""")
+⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮""")
 @iqthon.on(admin_cmd(pattern="م25(?: |$)(.*)"))    
 async def iq(event):
     await edit_or_reply(event, "**🚹  ⦑   اوامر الكروب 6    ⦒  :** \n\n⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮ \n\n⑴  ⦙ `.حظر عام + الرد على شخص` \n**✐ : يحضر الشخص من جميع الكروبات الي عندك  ❝** \n ⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮ \n⑵  ⦙ `.الغاء حظر عام + الرد على شخص` \n**✐ :  يلغي حضر العام للشخص  ❝** \n⑶  ⦙ `.المحظورين عام` \n**✐ :   يضهر الك جميع الاشخاص الي حاضرهم عام ❝** \n ⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮ \n⑷  ⦙ `.تقيد + الرد على شخص` \n**✐ : يقيد الشخص من المجموعة ❝** \n ⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮ \n⑸  ⦙ `.اكتم + الوقت بثواني + المدة` \n**✐ : كتم وقتي للشخص سوف نشرح الامر هنا : @L3LL3❝**\n ⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮ \n⑹ ⦙ `.احظر + الوقت بثواني + المدة` \n**✐ : حظر وقتي للشخص سوف نشرح الامر هنا : @L3LL3 ❝**\n⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮\n")
@@ -764,8 +763,7 @@ async def iq(event):
 ============================
 ⑼ ⦙ `.لوقو + الاسم`
 **✐  : يقوم بصنع logo خاص بك**
-============================
-  ⦑   شرح الاوامر : @L3LL3   ⦒""")
+============================""")
 @iqthon.on(admin_cmd(pattern="م31(?: |$)(.*)"))    
 async def iq(event):
     await edit_or_reply(event, """**🚹  ⦑   اوامر الملصقات   ⦒  : **
@@ -778,8 +776,7 @@ async def iq(event):
 **✐  : يجلب لك جميع معلومات الملصق**
 ⑷ ⦙ `.ملصق + اسم الحزمه او الملصق`
 **✐  : يبحث عن اسم الحزمه او الملصق ويجلبه اليك**
-============================
-  ⦑   شرح الاوامر : @L3LL3   ⦒""")
+============================""")
 
 @iqthon.tgbot.on(CallbackQuery(data=re.compile(rb"ordahln1")))
 @check_owner
