@@ -236,8 +236,8 @@ if Config.PLUGIN_CHANNEL:
 @iqthon.on(admin_cmd(pattern=f"{UPDATE}(?: |$)(.*)"))    
 async def _(event):
     if BOTLOG:
-        await event.client.send_message(BOTLOG_CHATID, "**☭︙   تم تحديث سورس تليثون ↻**")
-    sandy = await edit_or_reply(event , "☭︙  جـاري تـحديـث تـليثون العـرب  🔄\n🔹 - قـد يستغـرق الأمـر 5 - 10 دقائـق انتـظـر\nلاتقـم بتحـديث أكثـر من 3 مـرات باليـوم" ,)
+        await event.client.send_message(BOTLOG_CHATID, "**☭︙   تم تحديث سورس المهيب ↻**")
+    sandy = await edit_or_reply(event , "☭︙  جـاري تـحديـث سورس المهيب   🔄\n🔹 - قـد يستغـرق الأمـر 5 - 10 دقائـق انتـظـر\nلاتقـم بتحـديث أكثـر من 3 مـرات باليـوم" ,)
     try:
         ulist = get_collectionlist_items()
         for i in ulist:
